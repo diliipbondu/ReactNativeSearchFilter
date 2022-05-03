@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <TextInput style={styles.input} placeholder='Search for anything....' value={search} onChangeText={(search)=>setSearch(search)} />
+      <TextInput style={styles.input} placeholder='Search for anything....' value={search} onChangeText={(text)=>setSearch(text)} />
       <FlatList data={filterData} renderItem={({item})=>(
       <TodoList item={item} />)} keyExtractor={(item,index)=>index.toString()}/>
     </SafeAreaView>
